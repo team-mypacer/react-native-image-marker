@@ -229,10 +229,14 @@ UIImage * markerImgWithTextByPostion    (UIImage *image, NSString* text, MarkerP
     int w = image.size.width;
     int h = image.size.height;
       
+    NSMutableParagraphStyle *paragraphStyle = NSMutableParagraphStyle.new;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
+    
     NSDictionary *attr = @{
                            NSFontAttributeName: font,   //设置字体
                            NSForegroundColorAttributeName : color,      //设置字体颜色
-                           NSShadowAttributeName : shadow
+                           NSShadowAttributeName : shadow,
+                           NSParagraphStyleAttributeName: paragraphStyle
                            };
     
     CGSize size = [text sizeWithAttributes:attr];
