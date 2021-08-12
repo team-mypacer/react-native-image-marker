@@ -361,7 +361,7 @@ public class ImageMarkerManager extends ReactContextBaseJavaModule {
             textPaint.setColor(Color.parseColor(transRGBColor(color)));
 
             // ALIGN_CENTER, ALIGN_NORMAL, ALIGN_OPPOSITE
-            StaticLayout textLayout = new StaticLayout(mark, textPaint, canvas.getWidth(), Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
+            StaticLayout textLayout = new StaticLayout(mark, textPaint, canvas.getWidth(), Layout.Alignment.ALIGN_CENTER, 1.0f, 0.0f, false);
 
             int textHeight = textLayout.getHeight();
             int textWidth = 0;
